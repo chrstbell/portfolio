@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-blue: #4a8fc9;
+  --color-primary-gold: #e8a93c;
+  --color-peach: #ffb98c;
+  --color-mint: #8fd9c4;
+  --color-lavender: #c6b7f0;
+  --font-heading: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button {
+    cursor: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply m-0 bg-white font-body text-slate-800 antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary-gold/30 text-slate-900;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .grid-texture {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .grid-texture-subtle {
+    background-image:
+      linear-gradient(rgba(74, 143, 201, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74, 143, 201, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}

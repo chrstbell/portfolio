@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-labelledby="title desc">
+  <title id="title">Profile photo placeholder</title>
+  <desc id="desc">Placeholder for Christabel Aurelia Rufana profile photo</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8FD9C4"/>
+      <stop offset="50%" stop-color="#C6B7F0"/>
+      <stop offset="100%" stop-color="#FFB98C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#bg)"/>
+  <circle cx="200" cy="170" r="70" fill="#4A8FC9" opacity="0.25"/>
+  <ellipse cx="200" cy="380" rx="110" ry="80" fill="#4A8FC9" opacity="0.2"/>
+  <text x="200" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#4A8FC9" opacity="0.5">Your Photo</text>
+  <text x="200" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#4A8FC9" opacity="0.4">Replace in public/profile.jpg</text>
+</svg>
