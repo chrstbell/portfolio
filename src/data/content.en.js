@@ -77,7 +77,7 @@ export default {
       versionHistory: 'Version History',
       result: 'Result',
       viewFigma: 'View Prototype on Figma',
-      viewGithub: 'View Code on Github',
+      viewGithub: 'View Demo Project',
       portfolioTitle: (number) => `Project Portfolio (${number})`,
     },
     featured: {

@@ -78,7 +78,7 @@ export default {
       versionHistory: 'Riwayat Versi',
       result: 'Hasil',
       viewFigma: 'Lihat Prototipe di Figma',
-      viewGithub: 'Lihat Kode di Github',
+      viewGithub: 'Lihat Demo Project',
       portfolioTitle: (number) => `Project Portfolio (${number})`,
     },
     featured: {

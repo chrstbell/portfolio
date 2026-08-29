@@ -6,7 +6,7 @@ export const featuredProjects = [
     number: '01',
     title: 'HOZOF',
     figmaUrl: 'https://www.figma.com/design/hQ4sWcMFvB0y1OzER6kUhq/HORISON?node-id=3-2&t=sUcmA4r1BTm4B4pb-1',
-    githubUrl: 'https://github.com/chrstbell/HOZOF',
+    githubUrl: 'https://demoapp-hozof.vercel.app/',
     accent: 'bg-mint',
     images: [
       {
@@ -28,7 +28,7 @@ export const featuredProjects = [
     number: '02',
     title: 'HERO',
     figmaUrl: 'https://www.figma.com/design/TM6h4REfZTQhVSUQMhfRXM/HERO?node-id=0-1&t=RnuMHJa97BRnTKpy-1',
-    githubUrl: 'https://github.com/chrstbell/HERO',
+    githubUrl: 'https://demoapp-hero.vercel.app/',
     accent: 'bg-peach',
     images: [
       {
