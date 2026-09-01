@@ -18,7 +18,10 @@ export default function MediaWithPlaceholder({
   const filename = getMediaFilename(src)
 
   const placeholder = (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-2 bg-slate-100 text-slate-400">
+    <div
+      className="flex h-full w-full flex-col items-center justify-center gap-2"
+      style={{ background: 'var(--chip-bg)', color: 'var(--muted)' }}
+    >
       {type === 'video' ? (
         <Video className="h-8 w-8 shrink-0 opacity-60" strokeWidth={1.5} />
       ) : (

@@ -56,7 +56,8 @@ export default function LightboxModal({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-slate-900/70 backdrop-blur-sm"
+            className="absolute inset-0"
+            style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)' }}
             aria-hidden="true"
           />
 
@@ -65,12 +66,22 @@ export default function LightboxModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={reduced ? { opacity: 0 } : { opacity: 0, scale: 0.95, y: 8 }}
             transition={{ duration: reduced ? 0 : 0.28, ease: 'easeOut' }}
-            className={`relative z-10 flex max-h-[90vh] w-full flex-col overflow-hidden rounded-3xl bg-white shadow-2xl shadow-primary-blue/10 ring-1 ring-slate-100 ${sizeClass}`}
+            className={`relative z-10 flex max-h-[90vh] w-full flex-col overflow-hidden rounded-3xl shadow-2xl ${sizeClass}`}
+            style={{
+              background: 'var(--bg)',
+              border: '1px solid var(--line)',
+            }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex shrink-0 items-start justify-between gap-4 border-b border-slate-100 px-5 py-4 sm:px-6">
+            <div
+              className="flex shrink-0 items-start justify-between gap-4 px-5 py-4 sm:px-6"
+              style={{ borderBottom: '1px solid var(--line)' }}
+            >
               {title ? (
-                <h3 className="font-heading text-lg font-bold text-slate-900 sm:text-xl">
+                <h3
+                  className="font-heading text-lg font-bold sm:text-xl"
+                  style={{ color: 'var(--fg)' }}
+                >
                   {title}
                 </h3>
               ) : (
@@ -79,7 +90,16 @@ export default function LightboxModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-800"
+                className="rounded-full p-2 transition-colors"
+                style={{ color: 'var(--muted)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = 'var(--fg)'
+                  e.currentTarget.style.background = 'var(--chip-bg)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--muted)'
+                  e.currentTarget.style.background = 'transparent'
+                }}
                 aria-label={content.common.closeModal}
               >
                 <X size={20} />

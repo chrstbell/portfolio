@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext'
 
-export default function LanguageToggle({ scrolled = false, className = '' }) {
+export default function LanguageToggle({ className = '' }) {
   const { language, toggleLanguage } = useLanguage()
 
   return (
@@ -9,39 +9,31 @@ export default function LanguageToggle({ scrolled = false, className = '' }) {
       type="button"
       onClick={toggleLanguage}
       aria-label={language === 'id' ? 'Switch to English' : 'Ganti ke Bahasa Indonesia'}
-      className={`relative flex rounded-full p-1 ${
-        scrolled ? 'bg-primary-blue/10' : 'bg-white/15'
-      } ${className}`}
+      className={`relative flex rounded-full p-1 ${className}`}
+      style={{ background: 'var(--chip-bg)' }}
     >
       <motion.span
         layoutId="language-pill"
-        className="absolute inset-y-1 w-[calc(50%-2px)] rounded-full bg-white shadow-sm"
-        style={{ left: language === 'id' ? 4 : 'calc(50% + 0px)' }}
+        className="absolute inset-y-1 w-[calc(50%-2px)] rounded-full shadow-sm"
+        style={{
+          left: language === 'id' ? 4 : 'calc(50% + 0px)',
+          background: 'var(--bg)',
+        }}
         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
       />
       <span
-        className={`relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors ${
-          language === 'id'
-            ? scrolled
-              ? 'text-primary-blue'
-              : 'text-primary-blue'
-            : scrolled
-              ? 'text-slate-500'
-              : 'text-white/70'
-        }`}
+        className="relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors"
+        style={{
+          color: language === 'id' ? 'var(--fg)' : 'var(--muted)',
+        }}
       >
         ID
       </span>
       <span
-        className={`relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors ${
-          language === 'en'
-            ? scrolled
-              ? 'text-primary-blue'
-              : 'text-primary-blue'
-            : scrolled
-              ? 'text-slate-500'
-              : 'text-white/70'
-        }`}
+        className="relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors"
+        style={{
+          color: language === 'en' ? 'var(--fg)' : 'var(--muted)',
+        }}
       >
         EN
       </span>

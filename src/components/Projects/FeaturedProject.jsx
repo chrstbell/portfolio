@@ -6,12 +6,18 @@ import Button from '../ui/Button'
 import PhotoStack from '../ui/PhotoStack'
 import { LanguageFade } from '../ui/LanguageFade'
 
+const badgeStyles = {
+  default: 'bg-primary-blue/10 text-primary-blue',
+  redesign: 'bg-lavender/20 text-violet-700',
+}
+
 export default function FeaturedProject({ project, index = 0 }) {
   const { content } = useLanguage()
   const reduced = useReducedMotion()
   const reversed = index % 2 === 1
   const projectContent = content.projects.featured[project.id]
   const labels = content.projects.labels
+  const badgeClass = badgeStyles[project.badgeVariant] || badgeStyles.default
 
   return (
     <motion.article
@@ -54,12 +60,19 @@ export default function FeaturedProject({ project, index = 0 }) {
           </LanguageFade>
           <LanguageFade
             as="span"
-            className="mb-4 inline-block w-fit rounded-full bg-primary-blue/10 px-3 py-1 font-body text-xs font-medium text-primary-blue"
+            className={`mb-4 inline-block w-fit rounded-full px-3 py-1 font-body text-xs font-medium ${badgeClass}`}
           >
             {projectContent.label}
           </LanguageFade>
 
           <div className="space-y-4 font-body text-sm leading-relaxed text-slate-600 sm:text-base">
+            {projectContent.attributionNote && (
+              <div className="rounded-xl border border-lavender/30 bg-lavender/5 px-4 py-3 italic text-slate-500">
+                <LanguageFade as="p" className="text-xs sm:text-sm">
+                  {projectContent.attributionNote}
+                </LanguageFade>
+              </div>
+            )}
             <div>
               <LanguageFade as="h4" className="mb-1 font-semibold text-slate-900">
                 {labels.problem}
@@ -96,14 +109,18 @@ export default function FeaturedProject({ project, index = 0 }) {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button href={project.figmaUrl}>
-              <LanguageFade as="span">{labels.viewFigma}</LanguageFade>
-              <ExternalLink size={16} />
-            </Button>
-            <Button href={project.githubUrl} variant="secondary">
-              <LanguageFade as="span">{labels.viewGithub}</LanguageFade>
-              <GitBranch size={16} />
-            </Button>
+            {project.figmaUrl && (
+              <Button href={project.figmaUrl}>
+                <LanguageFade as="span">{labels.viewFigma}</LanguageFade>
+                <ExternalLink size={16} />
+              </Button>
+            )}
+            {project.githubUrl && (
+              <Button href={project.githubUrl} variant="secondary">
+                <LanguageFade as="span">{labels.viewGithub}</LanguageFade>
+                <GitBranch size={16} />
+              </Button>
+            )}
           </div>
         </div>
       </div>

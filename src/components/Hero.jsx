@@ -67,6 +67,7 @@ export default function Hero() {
 
       <div className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 pb-24 pt-28 text-center sm:px-6 lg:px-8">
         <motion.h1
+          id="hero-name"
           variants={reduced ? undefined : container}
           initial={reduced ? false : 'hidden'}
           animate="show"

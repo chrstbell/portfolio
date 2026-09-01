@@ -69,7 +69,7 @@ export default function ItemCarousel({
                 : { opacity: 0, x: direction >= 0 ? -48 : 48 }
             }
             transition={{ duration: reduced ? 0 : 0.3, ease: 'easeOut' }}
-            className="h-full w-full"
+            className="absolute inset-0 h-full w-full"
           >
             <MediaWithPlaceholder
               src={currentSrc}
@@ -94,7 +94,12 @@ export default function ItemCarousel({
           e.stopPropagation()
           paginate(-1)
         }}
-        className="absolute left-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition-colors hover:bg-white sm:left-2 sm:h-9 sm:w-9"
+        className="absolute left-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors sm:left-2 sm:h-9 sm:w-9"
+        style={{
+          background: 'var(--chip-bg)',
+          color: 'var(--fg-secondary)',
+          border: '1px solid var(--line)',
+        }}
         aria-label="Previous slide"
       >
         <ChevronLeft size={18} />
@@ -106,7 +111,12 @@ export default function ItemCarousel({
           e.stopPropagation()
           paginate(1)
         }}
-        className="absolute right-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-slate-700 shadow-md transition-colors hover:bg-white sm:right-2 sm:h-9 sm:w-9"
+        className="absolute right-1.5 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full transition-colors sm:right-2 sm:h-9 sm:w-9"
+        style={{
+          background: 'var(--chip-bg)',
+          color: 'var(--fg-secondary)',
+          border: '1px solid var(--line)',
+        }}
         aria-label="Next slide"
       >
         <ChevronRight size={18} />
@@ -122,11 +132,14 @@ export default function ItemCarousel({
               setPlaying(false)
               setSlide([dotIndex, dotIndex > index ? 1 : -1])
             }}
-            className={`h-1.5 rounded-full transition-all ${
-              dotIndex === index
-                ? 'w-4 bg-primary-gold'
-                : 'w-1.5 bg-white/80 hover:bg-white'
-            }`}
+            className="h-1.5 rounded-full transition-all"
+            style={{
+              width: dotIndex === index ? '1rem' : '0.375rem',
+              background:
+                dotIndex === index
+                  ? 'var(--accent-blue-dark, #6E8FB5)'
+                  : 'var(--line-strong)',
+            }}
             aria-label={`Go to slide ${dotIndex + 1}`}
           />
         ))}

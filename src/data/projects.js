@@ -45,6 +45,28 @@ export const featuredProjects = [
       },
     ],
   },
+  {
+    id: 'laundry',
+    number: '03',
+    title: 'LAUNDRY',
+    githubUrl: 'https://demoapp-laundry.vercel.app/',
+    accent: 'bg-lavender',
+    badgeVariant: 'redesign',
+    images: [
+      {
+        src: `${base}laundry-1.jpg`,
+        alt: 'Homepage Laundry',
+      },
+      {
+        src: `${base}laundry-2.jpg`,
+        alt: 'Halaman layanan dan checkout',
+      },
+      {
+        src: `${base}laundry-3.jpg`,
+        alt: 'Dashboard penjual Laundry',
+      },
+    ],
+  },
 ]
 
 export const courseworkProjects = [
@@ -52,24 +74,68 @@ export const courseworkProjects = [
     id: 'basain',
     title: 'BASAIN',
     image: `${base}basain.jpg`,
-    figmaUrl: 'https://www.figma.com/design/3JFd9vi8i8ZsiC9AXUFqfp/BASAIN?node-id=0-1&t=7mZ8fwoYcK2EjTXn-1',
+    figmaUrl: 'https://www.figma.com/proto/3JFd9vi8i8ZsiC9AXUFqfp/BASAIN?node-id=1-224&p=f&viewport=1955%2C2780%2C0.48&t=js7YXve23OrR0Mnj-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
+    images: [
+      {
+        src: `${base}basain-1.jpg`,
+        alt: 'Homepage BASAIN',
+      },
+      {
+        src: `${base}basain-2.jpg`,
+        alt: 'Halaman produk dan checkout',
+      },
+      {
+        src: `${base}basain-3.jpg`,
+        alt: 'Dashboard penjual BASAIN',
+      },
+    ],
   },
   {
     id: 'ruangbonsai',
     title: 'RuangBonsai',
     image: `${base}ruangbonsai.jpg`,
-    figmaUrl: 'https://www.figma.com/design/4KzG50xSskM1IraspFCvjA/RUANGBONSAI?node-id=41-1104&t=hWzarOCnAtch7igH-1',
+    figmaUrl: 'https://www.figma.com/proto/4KzG50xSskM1IraspFCvjA/RUANGBONSAI?node-id=41-1105&p=f&viewport=78%2C233%2C0.03&t=U2rYLwaSojW0y2Tj-1&scaling=scale-down&content-scaling=fixed&page-id=41%3A1104',
+    images: [
+      {
+        src: `${base}ruangbonsai-1.jpg`,
+        alt: 'Homepage RUANGBONSAI',
+      },
+      {
+        src: `${base}ruangbonsai-2.jpg`,
+        alt: 'Halaman produk dan checkout',
+      },
+      {
+        src: `${base}ruangbonsai-3.jpg`,
+        alt: 'Dashboard penjual RUANGBONSAI',
+      },
+    ],
   },
   {
     id: 'ihealth',
     title: 'iHealth',
     image: `${base}ihealth.jpg`,
-    figmaUrl: 'https://www.figma.com/design/cO4WZ67ztxuom9T6cTkG9s/IHEALT?node-id=0-1&t=A1ntXB7mFLzLPFA9-1',
+    figmaUrl: 'https://www.figma.com/proto/cO4WZ67ztxuom9T6cTkG9s/IHEALT?node-id=11-92&p=f&viewport=367%2C239%2C0.04&t=D7h2knCjVKsAmdah-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
+    images: [
+      {
+        src: `${base}ihealth-1.jpg`,
+        alt: 'Homepage iHealth',
+      },
+      {
+        src: `${base}ihealth-2.jpg`,
+        alt: 'Halaman produk dan checkout',
+      },
+    ],
   },
   {
     id: 'fzt',
     title: 'FZT.COM',
     image: `${base}fzt.jpg`,
-    figmaUrl: 'https://www.figma.com/design/ln3N7RxWkBUxTeM0jv5Cfp/tasik?node-id=0-1&t=Gjcrg9lkMPDzDtHa-1',
+    figmaUrl: 'https://www.figma.com/proto/ln3N7RxWkBUxTeM0jv5Cfp/tasik?node-id=26-3566&p=f&viewport=254%2C62%2C0.03&t=Jm00brM4zptbjNLk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1',
+    images: [
+      {
+        src: `${base}fzt-1.jpg`,
+        alt: 'Homepage FZT.COM',
+      },
+    ],
   },
 ];

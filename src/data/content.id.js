@@ -12,14 +12,19 @@ export default {
     ],
   },
   hero: {
+    greeting: 'Halo, saya Christabel Aurelia Rufana',
+    avatarUrl: `${import.meta.env.BASE_URL}profile.jpg`,
     tagline: 'Desainer Grafis · UI/UX · Developer',
     subTagline:
       'Desainer & developer dengan fokus pada pengalaman digital yang bersih dan rapi',
+    bio: 'Mahasiswa Sistem Informasi tingkat akhir di Universitas BSI Tasikmalaya, sekaligus UI/UX Designer & Front-End Developer yang membangun produk digital dari riset sampai kode. Saya juga aktif membuat desain visual untuk organisasi kampus dan bisnis pribadi.',
+    badge1: 'Berdomisili di Tasikmalaya, Indonesia',
+    badge2: 'Terbuka untuk kerja remote maupun on-site',
     scrollLabel: 'Gulir',
   },
   about: {
     eyebrow: '(Hai, saya)',
-    heading: 'Christabel Aurelia Rufana',
+    heading: 'Tentang Saya',
     paragraphs: [
       'Mahasiswa Sistem Informasi dan UI/UX Designer yang membangun produk digital secara end-to-end — mulai dari riset pengguna dan wireframe di Figma hingga kode yang benar-benar berfungsi dengan Laravel dan HTML/CSS.',
       'Saya telah merancang dan mengembangkan sistem yang benar-benar digunakan di dunia nyata, termasuk HOZOF, platform pemesanan makanan hotel, dan HERO, situs e-commerce yang saya bangun sendiri dari tampilan hingga database. Selain proyek perkuliahan, saya menerapkan proses yang sama di setiap produk: memahami masalah, merancang solusi, lalu merilisnya.',
@@ -61,10 +66,9 @@ export default {
   },
   projects: {
     featuredSection: {
-      eyebrow: 'Karya terpilih',
-      title: 'Proyek Unggulan',
+      title: 'Proyek',
       subtitle:
-        'Produk nyata yang dirilis — dari riset dan desain hingga kode yang berfungsi.',
+        'Proyek yang dibuat dengan nyata — dari riset dan desain hingga kode yang berfungsi.' ,
     },
     courseworkSection: {
       eyebrow: 'Proyek perkuliahan',
@@ -83,7 +87,7 @@ export default {
     },
     featured: {
       hozof: {
-        label: 'Desain & Pengembangan UI/UX — Proyek Kelompok — Terdaftar HKI',
+        label: 'Pengembangan Full-Stack — Proyek Kelompok — Terdaftar HKI — 2026',
         problem:
           'Sebelumnya, tamu hotel harus menelepon resepsionis untuk memesan makanan — lambat, rawan salah komunikasi, dan menambah beban staf saat jam sibuk.',
         process:
@@ -104,13 +108,24 @@ export default {
           'Digunakan secara aktif oleh staf hotel. HoriFood dan HOZOF sama-sama terdaftar di bawah perlindungan Hak Kekayaan Intelektual (HKI) Indonesia.',
       },
       hero: {
-        label: 'Desain UI/UX & Pengembangan Full-Stack — Proyek Kelompok — 2026',
+        label: 'Pengembangan Full-Stack — Proyek Kelompok — 2026',
         problem:
           'Toko kelontong keluarga saya (Toko Hero) sudah terdaftar di Shopee, tapi biaya admin marketplace cukup memotong margin keuntungan — misalnya, produk seharga Rp20.000 tidak sepenuhnya masuk ke penjual setelah potongan Shopee. Supaya margin tetap utuh, kami membangun website e-commerce khusus untuk Toko Hero, melayani pelanggan lokal dalam kota (pengiriman terbatas dalam kota).',
         process:
-          'Membuat sketsa layout homepage kasar di Figma, lalu membangun sistem penuhnya sebagai tim — database, front-end, dan back-end. Untuk pembeli: perbandingan produk, opsi ambil di toko atau pengiriman lokal, rating foto-dan-komentar, wishlist dengan notifikasi diskon, dan update status pesanan otomatis via WhatsApp. Untuk sisi penjual: notifikasi pesanan baru, CRUD penuh untuk brand/produk/kategori, analitik rating dan produk terlaris, serta ringkasan pendapatan bulanan yang bisa diunduh sebagai PDF.',
+          'Membuat sketsa layout homepage kasar di Figma, lalu membangun sistem penuhnya sebagai tim — database, front-end, dan back-end. Untuk pembeli: checkout 3 langkah (ambil di toko atau pengiriman GoSend dengan ongkir tetap, pembayaran tunai/transfer bank/QRIS dengan unggah bukti), perbandingan hingga 2 produk, wishlist dengan notifikasi harga turun dan stok tersedia kembali, serta ulasan foto dengan sistem vote like/dislike yang hanya bisa diisi pembeli terverifikasi dalam 24 jam setelah pesanan selesai. Untuk penjual: dashboard real-time dengan notifikasi suara untuk pesanan baru, CRUD penuh untuk produk/kategori/merek, logika promo fleksibel (diskon persen, nominal, dan beli-1-gratis-1), insight performa produk, serta laporan keuangan dengan perhitungan laba bersih yang bisa diekspor ke PDF. Update status pesanan dan login OTP berjalan lewat WhatsApp (via Fonnte), selain login email standar.',
         result:
           'Platform e-commerce khusus yang membuat Toko Hero bisa berjualan online secara lokal tanpa kehilangan margin ke biaya admin marketplace.',
+      },
+      laundry: {
+        label: 'Redesign & Pengembangan Fitur — Proyek Perbandingan Skripsi',
+        attributionNote:
+          'Sistem dasar aplikasi ini dibangun oleh kelompok lain sebagai bahan perbandingan skripsi saya (HERO vs LAUNDRY). Bagian di bawah ini menjelaskan kontribusi spesifik yang saya kerjakan: redesain UI/UX menyeluruh, fitur baru, dan perbaikan fitur yang sudah ada.',
+        problem:
+          'Untuk kebutuhan perbandingan skripsi antara sistem HERO dan LAUNDRY, sistem laundry yang sudah ada masih memakai tampilan template admin generik (AdminLTE bawaan) dan sejumlah fitur penting belum tersedia — seperti manajemen langganan member, verifikasi pembayaran QRIS, laporan kerusakan/noda cucian terstruktur, dan sistem loyalitas pelanggan.',
+        process:
+          'Merombak seluruh tampilan dari template generik menjadi desain modern yang konsisten di semua halaman (admin & member). Menambahkan fitur baru: manajemen langganan (paket Bronze/Silver/Gold dengan diskon & prioritas), verifikasi pembayaran QRIS, fitur Group Cuci/split bill dengan kode undangan, laporan noda dengan foto & tingkat keparahan, dashboard rating & statistik, sistem poin-streak-voucher milestone (gamifikasi loyalitas member), tracking timeline status cucian 6 tahap untuk member, serta notifikasi WhatsApp otomatis (via Fontee API) saat status transaksi berubah. Juga memperbaiki beberapa fitur yang sudah ada: riwayat transaksi (dipecah 3 tabel status, filter periode), payment modal (breakdown diskon & kembalian real-time), dan mengganti seluruh dialog konfirmasi JS bawaan menjadi modal yang lebih rapi.',
+        result:
+          'Sistem yang jauh lebih lengkap dan profesional dibanding versi awal, dengan gamifikasi loyalitas pelanggan (poin, streak, level, voucher), transparansi harga penuh untuk member, dan operasional yang lebih efisien untuk admin — menjadi pembanding yang layak terhadap sistem HERO dalam skripsi saya.',
       },
     },
     coursework: {
@@ -195,7 +210,7 @@ export default {
     items: {
       bsi: {
         degree: 'Gelar Sarjana, Sistem Informasi',
-        detail: 'IPK 3.91/4.00',
+        detail: 'IPK 3.92/4.00',
       },
       sma: {
         degree: 'IPS',
@@ -204,26 +219,29 @@ export default {
     },
   },
   experience: {
-    eyebrow: 'Karier',
     title: 'Pengalaman Kerja',
     items: {
       horison: {
-        period: 'Agu–Okt 2025 (3 bulan)',
+        period: 'Agu–Okt 2025 (3 bulan) · On-site',
         description:
-          'Menangani operasional akuntansi dan logistik selama magang. Secara mandiri merancang dan mengembangkan HOZOF, sistem pemesanan makanan berbasis QR yang kini digunakan staf hotel — lihat Proyek Unggulan 01.',
+          'Menangani operasional akuntansi dan logistik selama magang. Secara mandiri merancang dan mengembangkan HOZOF, sistem pemesanan makanan berbasis QR yang kini digunakan staf hotel.',
       },
       basain: {
         period: 'Jan–Agu 2024 (8 bulan) · Remote',
         description:
-          'Merancang UI/UX untuk situs e-commerce mobile-friendly BASAIN di Figma, serta mengelola konten media sosial dan interaksi pelanggan secara remote.',
+          'Merancang UI/UX untuk situs e-commerce mobile-friendly BASAIN di Figma, serta mengelola media sosial dan interaksi pelanggan secara remote.',
       },
     },
+  },
+  organizations: {
+    title: 'Organisasi',
+    campusLabel: 'Organisasi Kampus',
+    committeeLabel: 'Organisasi Kepanitiaan',
   },
   contact: {
     heading: 'Terima kasih sudah menjelajahi portofolio ini',
     subtext:
       'Saat ini saya terbuka untuk peran UI/UX Design, Graphic Design, dan Front-End — yuk ngobrol.',
-    copyright: `© ${new Date().getFullYear()} Christabel Aurelia R. All rights reserved.`,
   },
   photoStack: {
     hint: 'Klik foto untuk lihat lainnya',

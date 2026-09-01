@@ -11,7 +11,7 @@ export const aboutData = {
 }
 
 export const heroData = {
-  name: 'CHRISTABEL AURELIA R',
+  name: 'CHRISTABEL AURELIA RUFANA',
   subtitle: 'PORTFOLIO',
   tagline:
     'Graphic Designer · UI/UX · Developer — designer & developer with a focus on clean digital experiences',

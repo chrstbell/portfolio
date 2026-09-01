@@ -12,14 +12,19 @@ export default {
     ],
   },
   hero: {
+    greeting: "Hi, I'm Christabel Aurelia Rufana",
+    avatarUrl: `${import.meta.env.BASE_URL}profile.jpg`,
     tagline: 'Graphic Designer · UI/UX · Developer',
     subTagline:
-      'Designer & developer with a focus on clean digital experiences',
+      'Designer & Developer with a focus on clean digital experiences',
+    bio: 'Final-year Information Systems student at Universitas BSI Tasikmalaya, and a UI/UX Designer & Front-End Developer who builds digital products from research to code. I also stay active doing visual design for campus organizations and my own small business.',
+    badge1: 'Based in Tasikmalaya, Indonesia',
+    badge2: 'Open to remote or on-site work',
     scrollLabel: 'Scroll',
   },
   about: {
     eyebrow: '(Hi, i am)',
-    heading: 'Christabel Aurelia Rufana',
+    heading: 'About Me',
     paragraphs: [
       'Information Systems student and UI/UX Designer who builds end-to-end digital products — from user research and wireframes in Figma to functional, working code in Laravel and HTML/CSS.',
       "I've designed and developed real systems used in production, including HOZOF, a hotel food-ordering platform, and HERO, an e-commerce site built solo from layout to database. Alongside coursework projects, I bring the same process to every product: understand the problem, design the solution, ship it.",
@@ -61,10 +66,9 @@ export default {
   },
   projects: {
     featuredSection: {
-      eyebrow: 'Selected work',
-      title: 'Featured Projects',
+      title: 'Projects',
       subtitle:
-        'Real products shipped — from research and design to working code.',
+        'Real projects that are actually built — from research and design to working code.',
     },
     courseworkSection: {
       eyebrow: 'Coursework',
@@ -82,7 +86,7 @@ export default {
     },
     featured: {
       hozof: {
-        label: 'UI/UX Design & Development — Group Project — IP-Registered (HKI)',
+        label: 'Full-Stack Development — Group Project — IP-Registered (HKI) — 2026',
         problem:
           'Hotel guests previously had to call the front desk to order food — slow, prone to miscommunication, and adding workload to staff during busy hours.',
         process:
@@ -103,13 +107,24 @@ export default {
           "Adopted for active use by hotel staff. Both HoriFood and HOZOF are registered under Indonesia's Intellectual Property (HKI) protection.",
       },
       hero: {
-        label: 'UI/UX Design & Full-Stack Development — Group Project — 2026',
+        label: 'Full-Stack Development — Group Project — 2026',
         problem:
           "My family's grocery store (Toko Hero) was already listed on Shopee, but marketplace admin fees cut significantly into profit margins. To keep full margins, we built a dedicated e-commerce website exclusively for Toko Hero, serving local in-city customers (delivery limited to within the city).",
         process:
-          'Sketched a rough homepage layout in Figma, then built the full system as a team — database, front-end, and back-end. For buyers: product comparison, store pickup or local delivery options, photo-and-comment ratings, wishlist with discount notifications, automatic WhatsApp order status updates. For the seller side: new-order notifications, full CRUD for brands/products/categories, ratings and best-seller analytics, and a monthly income summary downloadable as PDF.',
+          'Sketched a rough homepage layout in Figma, then built the full system as a team — database, front-end, and back-end. For buyers: a 3-step checkout (store pickup or fixed-rate GoSend delivery, cash/bank transfer/QRIS payment with proof upload), comparison of up to 2 products, a wishlist with price-drop and back-in-stock alerts, and photo reviews with a like/dislike vote system, open only to verified buyers within 24 hours of order completion. For sellers: a real-time dashboard with sound alerts for new orders, full CRUD for products/categories/brands, flexible promo logic (percentage discount, nominal discount, and buy-one-get-one), product performance insights, and a financial report with net profit calculation exportable to PDF. Order status updates and OTP login both run through WhatsApp (via Fonnte), alongside standard email login.',
         result:
           'A dedicated e-commerce platform that lets Toko Hero sell online locally without losing margin to marketplace admin fees.',
+      },
+      laundry: {
+        label: 'Redesign & Feature Enhancement — Thesis Comparison Project — 2026',
+        attributionNote:
+          'The base system was built by a different student group as a comparison subject for my thesis (HERO vs LAUNDRY). The section below describes my specific contributions: a full UI/UX redesign, new features, and improvements to existing features.',
+        problem:
+          'For a thesis comparison between the HERO and LAUNDRY systems, the existing laundry system still used a generic admin template (default AdminLTE) and lacked several important features — such as member subscription management, QRIS payment verification, structured stain/damage reporting, and a customer loyalty system.',
+        process:
+          'Redesigned the entire interface from a generic template into a consistent, modern design across all pages (admin & member). Added new features: subscription management (Bronze/Silver/Gold tiers with discounts and priority service), QRIS payment verification, a Group Wash/split-bill feature with invite codes, structured stain reports with photos and severity levels, a rating dashboard with statistics, a points-streak-voucher milestone system (member loyalty gamification), a 6-stage laundry status tracking timeline for members, and automatic WhatsApp notifications (via Fontee API) on transaction status changes. Also improved several existing features: transaction history (split into 3 status tables with period filters), the payment modal (real-time discount breakdown and change calculation), and replaced all default JS confirmation dialogs with styled modals.',
+        result:
+          'A significantly more complete and professional system compared to the original version, with customer loyalty gamification (points, streaks, levels, vouchers), full price transparency for members, and more efficient admin operations — serving as a solid comparison point against the HERO system in my thesis.',
       },
     },
     coursework: {
@@ -193,7 +208,7 @@ export default {
     items: {
       bsi: {
         degree: "Bachelor's Degree, Information Systems",
-        detail: 'GPA 3.91/4.00',
+        detail: 'GPA 3.92/4.00',
       },
       sma: {
         degree: 'Science & Social Studies',
@@ -202,26 +217,29 @@ export default {
     },
   },
   experience: {
-    eyebrow: 'Career',
     title: 'Work Experience',
     items: {
       horison: {
-        period: 'Aug–Oct 2025 (3 months)',
+        period: 'Aug–Oct 2025 (3 months) · On-site',
         description:
-          'Handled accounting and logistics operations during internship. Independently designed and developed HOZOF, a QR-based food ordering system now used by hotel staff — see Featured Project 01.',
+          'Handled accounting and logistics operations during internship. Independently designed and developed HOZOF, a QR-based food ordering system now used by hotel staff.',
       },
       basain: {
         period: 'Jan–Aug 2024 (8 months) · Remote',
         description:
-          "Designed the UI/UX for BASAIN's mobile-friendly e-commerce site in Figma, and managed social media content and customer engagement remotely.",
+          "Designed the UI/UX for BASAIN's mobile-friendly e-commerce site in Figma, and managed social media and customer engagement remotely.",
       },
     },
+  },
+  organizations: {
+    title: 'Organizations',
+    campusLabel: 'Campus Organizations',
+    committeeLabel: 'Event Committees',
   },
   contact: {
     heading: 'Thank you for exploring this portfolio',
     subtext:
       "I'm currently open to UI/UX Design, Graphic Design, and Front-End roles — let's talk.",
-    copyright: `© ${new Date().getFullYear()} Christabel Aurelia R. All rights reserved.`,
   },
   photoStack: {
     hint: 'Click photo to see more',

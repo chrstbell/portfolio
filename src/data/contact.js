@@ -30,5 +30,4 @@ export const contactData = {
       icon: Link,
     },
   ],
-  copyright: `© ${new Date().getFullYear()} Christabel Aurelia R. All rights reserved.`,
 }

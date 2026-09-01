@@ -21,15 +21,24 @@ export default function SectionHeading({
       className={`flex flex-col gap-2 ${alignClass} ${className}`}
     >
       {eyebrow && (
-        <span className="font-body text-sm font-medium uppercase tracking-widest text-primary-blue/70">
+        <span
+          className="font-body text-sm font-medium uppercase tracking-widest"
+          style={{ color: 'var(--accent-blue-dark, #6E8FB5)' }}
+        >
           {eyebrow}
         </span>
       )}
-      <h2 className="font-heading text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+      <h2
+        className="font-heading text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl"
+        style={{ color: 'var(--fg)' }}
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="max-w-2xl font-body text-base text-slate-600 sm:text-lg">
+        <p
+          className="max-w-2xl font-body text-base sm:text-lg"
+          style={{ color: 'var(--fg-secondary)' }}
+        >
           {subtitle}
         </p>
       )}

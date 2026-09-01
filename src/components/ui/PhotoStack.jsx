@@ -41,7 +41,16 @@ export default function PhotoStack({ images }) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative mx-auto h-[220px] w-full max-w-[280px] sm:h-[260px] sm:max-w-[320px]">
+      <div
+        className="relative mx-auto w-full overflow-hidden"
+        style={{
+          aspectRatio: '16 / 10',
+          minHeight: '320px',
+          borderRadius: '1rem',
+          background: 'var(--chip-bg)',
+          border: '1px solid var(--line)',
+        }}
+      >
         {order.map((imageIndex, position) => {
           const image = images[imageIndex]
           const isFront = position === 0
@@ -55,7 +64,7 @@ export default function PhotoStack({ images }) {
               onClick={isFront ? handleClick : undefined}
               disabled={!isFront}
               aria-label={image.alt}
-              className={`absolute left-1/2 top-0 w-[78%] -translate-x-1/2 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-black/5 ${
+              className={`absolute left-1/2 top-0 w-[78%] -translate-x-1/2 overflow-hidden rounded-2xl shadow-lg ${
                 isFront ? 'cursor-pointer' : 'pointer-events-none'
               }`}
               initial={false}
@@ -69,9 +78,16 @@ export default function PhotoStack({ images }) {
                   : { type: 'spring', stiffness: 280, damping: 24, mass: 0.8 }
               }
               whileTap={isFront && !reduced ? { scale: style.scale * 0.97 } : undefined}
-              style={{ transformOrigin: 'center center' }}
+              style={{
+                transformOrigin: 'center center',
+                background: 'var(--card-bg)',
+                border: '1px solid var(--line)',
+              }}
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-white to-primary-blue/10">
+              <div
+                className="relative aspect-[4/3] w-full overflow-hidden"
+                style={{ background: 'var(--chip-bg)' }}
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
@@ -81,11 +97,6 @@ export default function PhotoStack({ images }) {
                     e.currentTarget.style.display = 'none'
                   }}
                 />
-                <div className="flex h-full w-full items-center justify-center p-4 text-center">
-                  <span className="font-body text-xs text-primary-blue/60 sm:text-sm">
-                    {image.alt}
-                  </span>
-                </div>
               </div>
             </motion.button>
           )
@@ -96,11 +107,14 @@ export default function PhotoStack({ images }) {
         {images.map((_, i) => (
           <span
             key={i}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === frontImageIndex
-                ? 'w-4 bg-primary-blue'
-                : 'w-1.5 bg-primary-blue/30'
-            }`}
+            className="h-1.5 rounded-full transition-all duration-300"
+            style={{
+              width: i === frontImageIndex ? '1rem' : '0.375rem',
+              background:
+                i === frontImageIndex
+                  ? 'var(--accent-blue-dark, #6E8FB5)'
+                  : 'var(--line-strong)',
+            }}
             aria-hidden="true"
           />
         ))}
@@ -114,7 +128,8 @@ export default function PhotoStack({ images }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.3 }}
-            className="mt-2 font-body text-xs text-primary-blue/70"
+            className="mt-2 font-body text-xs"
+            style={{ color: 'var(--muted)' }}
           >
             {content.photoStack.hint}
           </motion.p>

@@ -1,53 +1,93 @@
-import { ExternalLink } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { ImageOff } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { useLanguage } from '../../context/LanguageContext'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
-import { useTilt } from '../../hooks/useTilt'
-import Button from '../ui/Button'
 import { LanguageFade } from '../ui/LanguageFade'
-import Card from '../ui/Card'
 
-export default function ProjectCard({ project, index = 0 }) {
-  const { content } = useLanguage()
+export default function ProjectCard({
+  to,
+  badge,
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  accent,
+  number,
+  delay = 0,
+}) {
   const reduced = useReducedMotion()
-  const { ref, onMouseMove, onMouseLeave } = useTilt(reduced ? 0 : 6)
-  const projectContent = content.projects.coursework[project.id]
-  const labels = content.projects.labels
 
   return (
-    <Card delay={index * 0.08} hover={false} className="flex h-full flex-col">
-      <div
-        ref={ref}
-        onMouseMove={reduced ? undefined : onMouseMove}
-        onMouseLeave={reduced ? undefined : onMouseLeave}
-        className="mb-5 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-blue/10 to-lavender/20 transition-transform duration-300 ease-out"
-        style={{ transformStyle: 'preserve-3d' }}
+    <motion.div
+      initial={reduced ? false : { opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.4, delay, ease: 'easeOut' }}
+    >
+      <Link
+        to={to}
+        className="group block overflow-hidden rounded-2xl transition-shadow hover:shadow-lg"
+        style={{
+          border: '1px solid var(--line)',
+          background: 'var(--card-bg)',
+        }}
       >
-        <div className="aspect-video overflow-hidden">
-      <img
-      src={project.image}
-      alt={project.title}
-      className="h-full w-full object-cover"
-    />
-  </div>
-</div>
+        {/* Image area */}
+        <div
+          className="relative flex aspect-[4/3] items-center justify-center overflow-hidden"
+          style={{ background: accent || 'var(--chip-bg)' }}
+        >
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            />
+          ) : (
+            <div className="flex flex-col items-center gap-2">
+              <ImageOff
+                size={28}
+                style={{ color: 'var(--muted)', opacity: 0.4 }}
+              />
+              <span
+                className="font-heading text-3xl font-extrabold"
+                style={{ color: 'var(--fg)', opacity: 0.1 }}
+              >
+                {number || title}
+              </span>
+            </div>
+          )}
+        </div>
 
-      <LanguageFade
-        as="span"
-        className="mb-2 inline-block w-fit rounded-full bg-primary-gold/20 px-3 py-1 font-body text-xs font-semibold text-primary-blue"
-      >
-        {projectContent.badge}
-      </LanguageFade>
-      <h3 className="mb-2 font-heading text-xl font-bold text-slate-900">
-        {project.title}
-      </h3>
-      <p className="mb-5 flex-1 font-body text-sm leading-relaxed text-slate-600">
-        <LanguageFade as="span">{projectContent.description}</LanguageFade>
-      </p>
-      <Button href={project.figmaUrl} variant="secondary" className="w-full sm:w-auto">
-        <LanguageFade as="span">{labels.viewFigma}</LanguageFade>
-        <ExternalLink size={16} />
-      </Button>
-    </Card>
+        {/* Content */}
+        <div className="p-4 sm:p-5">
+          {badge && (
+            <span
+              className="mb-2 inline-block rounded-full px-2.5 py-0.5 font-body text-[10px] font-medium"
+              style={{
+                color: 'var(--accent-blue-dark, #6E8FB5)',
+                background: 'var(--chip-bg)',
+              }}
+            >
+              <LanguageFade as="span">{badge}</LanguageFade>
+            </span>
+          )}
+          <h3
+            className="font-heading text-lg font-bold"
+            style={{ color: 'var(--fg)' }}
+          >
+            {title}
+          </h3>
+          {description && (
+            <p
+              className="mt-1 line-clamp-2 font-body text-sm"
+              style={{ color: 'var(--muted)' }}
+            >
+              <LanguageFade as="span">{description}</LanguageFade>
+            </p>
+          )}
+        </div>
+      </Link>
+    </motion.div>
   )
 }

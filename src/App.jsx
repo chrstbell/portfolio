@@ -1,32 +1,45 @@
+import { Routes, Route } from 'react-router-dom'
 import { LanguageProvider } from './context/LanguageContext'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Expertise from './components/Expertise'
-import Projects from './components/Projects'
-import GraphicDesign from './components/GraphicDesign'
-import Education from './components/Education'
-import Certificates from './components/Certificates'
-import Experience from './components/Experience'
-import Contact from './components/Contact'
-import CustomCursor from './components/ui/CustomCursor'
+import { ThemeProvider } from './context/ThemeContext'
+import { MiniProfileProvider, useMiniProfile } from './context/MiniProfileContext'
+import RailNav from './components/RailNav'
+import Beranda from './components/pages/Beranda'
+import Tentang from './components/pages/Tentang'
+import Proyek from './components/pages/Proyek'
+import DetailProject from './components/pages/DetailProject'
+import Sertifikat from './components/pages/Sertifikat'
+import ExperiencePage from './components/pages/ExperiencePage'
+import Kontak from './components/pages/Kontak'
+
+function AppLayout() {
+  const { isVisible } = useMiniProfile()
+
+  return (
+    <>
+      <RailNav miniProfileVisible={isVisible} />
+      <main className="min-h-screen" style={{ background: 'var(--bg)' }}>
+        <Routes>
+          <Route path="/" element={<Beranda />} />
+          <Route path="/tentang" element={<Tentang />} />
+          <Route path="/proyek" element={<Proyek />} />
+          <Route path="/proyek/:slug" element={<DetailProject />} />
+          <Route path="/sertifikat" element={<Sertifikat />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/kontak" element={<Kontak />} />
+        </Routes>
+      </main>
+    </>
+  )
+}
 
 export default function App() {
   return (
     <LanguageProvider>
-      <CustomCursor />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Expertise />
-        <Projects />
-        <GraphicDesign />
-        <Education />
-        <Certificates />
-        <Experience />
-        <Contact />
-      </main>
+      <ThemeProvider>
+        <MiniProfileProvider>
+          <AppLayout />
+        </MiniProfileProvider>
+      </ThemeProvider>
     </LanguageProvider>
   )
 }

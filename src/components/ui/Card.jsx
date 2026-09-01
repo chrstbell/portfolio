@@ -4,6 +4,7 @@ import { useReducedMotion } from '../../hooks/useReducedMotion'
 export default function Card({
   children,
   className = '',
+  style = {},
   delay = 0,
   hover = true,
 }) {
@@ -18,7 +19,13 @@ export default function Card({
       whileHover={
         hover && !reduced ? { y: -4, transition: { duration: 0.25 } } : undefined
       }
-      className={`rounded-3xl bg-white p-6 shadow-lg shadow-primary-blue/5 ring-1 ring-slate-100 sm:p-8 ${className}`}
+      className={`rounded-3xl p-6 shadow-lg sm:p-8 ${className}`}
+      style={{
+        background: 'var(--card-bg)',
+        boxShadow: '0 4px 24px var(--card-shadow)',
+        border: '1px solid var(--line)',
+        ...style,
+      }}
     >
       {children}
     </motion.div>

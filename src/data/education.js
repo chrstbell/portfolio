@@ -4,7 +4,7 @@ export const educationData = [
     institution: 'Universitas Bina Sarana Informatika (BSI)',
     degree: "Bachelor's Degree, Information Systems",
     period: '2023–2027',
-    detail: 'GPA 3.91/4.00',
+    detail: 'GPA 3.92/4.00',
   },
   {
     id: 'sma',
