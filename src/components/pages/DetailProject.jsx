@@ -114,7 +114,7 @@ export default function DetailProject() {
         <div
           className="mb-8 overflow-hidden"
           style={{
-            aspectRatio: '16 / 10',
+            aspectRatio: '1700 / 1080',
             minHeight: '320px',
             borderRadius: '1rem',
             border: '1px solid var(--line)',

@@ -44,7 +44,7 @@ export default function PhotoStack({ images }) {
       <div
         className="relative mx-auto w-full overflow-hidden"
         style={{
-          aspectRatio: '16 / 10',
+          aspectRatio: '1700 / 1080',
           minHeight: '320px',
           borderRadius: '1rem',
           background: 'var(--chip-bg)',
@@ -85,7 +85,7 @@ export default function PhotoStack({ images }) {
               }}
             >
               <div
-                className="relative aspect-[4/3] w-full overflow-hidden"
+                className="relative aspect-[170/108] w-full overflow-hidden"
                 style={{ background: 'var(--chip-bg)' }}
               >
                 <img

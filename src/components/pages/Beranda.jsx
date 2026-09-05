@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, Clock, Clapperboard, Palette } from 'lucide-react'
 import { SiGmail, SiFigma, SiLaravel, SiJavascript, SiMysql, SiHtml5, SiCss, SiGit, SiGithub, SiLaragon, SiPhp } from 'react-icons/si'
@@ -303,9 +304,9 @@ export default function Beranda() {
           </h3>
           <div className="flex flex-col">
             {selectedWork.map((p, i) => (
-              <a
+              <Link
                 key={p.slug}
-                href={`/proyek/${p.slug}`}
+                to={`/proyek/${p.slug}`}
                 className="work-row group"
               >
                 <div className="work-row-left">
@@ -316,7 +317,7 @@ export default function Beranda() {
                   <span className="work-row-tag">{language === 'id' ? p.tag.id : p.tag.en}</span>
                 </div>
                 <span className="work-row-arrow">→</span>
-              </a>
+              </Link>
             ))}
           </div>
         </motion.div>
