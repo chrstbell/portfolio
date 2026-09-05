@@ -132,22 +132,22 @@ export default {
       basain: {
         badge: 'Jul 2024 – Agu 2024 · Proyek Solo',
         description:
-          'Merancang UI/UX ramah-mobile untuk toko casing HP online, dari wireframe hingga prototipe high-fidelity di Figma, fokus pada alur belanja yang mulus dan responsif.',
+          'Merancang UI/UX end-to-end untuk BASAIN, platform e-commerce mobile toko casing HP — proyek pertama saya di bidang UI/UX. Mencakup keseluruhan alur pengguna mulai dari splash screen, login, homepage, kategori produk, keranjang, hingga checkout dan pembayaran, dari tahap wireframe hingga prototipe high-fidelity di Figma. Berfokus pada alur belanja yang intuitif dan pengalaman navigasi yang mulus untuk perangkat mobile.',
       },
       ruangbonsai: {
         badge: 'Semester 4 · Proyek Kelompok',
         description:
-          'Merancang platform e-commerce untuk tanaman bonsai dan peralatan perawatannya, menyeimbangkan presentasi estetik dengan kemudahan menjelajah dan checkout.',
+          'Merancang UI/UX end-to-end untuk RuangBonsai, platform e-commerce tanaman bonsai dan peralatan perawatannya — proyek kelompok mata kuliah semester 4, dengan peran penuh sebagai UI/UX Designer. Dari wireframe hingga prototipe high-fidelity di Figma, mencakup alur menjelajah katalog produk hingga checkout, dengan fokus menyeimbangkan presentasi estetik produk dan kemudahan navigasi belanja.',
       },
       ihealth: {
         badge: 'Semester 3 · Proyek Kelompok',
         description:
-          'Merancang sistem informasi kesehatan dengan dashboard berbasis peran untuk dokter, pasien, dan admin, masing-masing disesuaikan dengan tugas dan aksesnya.',
+          'Merancang UI/UX end-to-end untuk i-Health, sistem informasi kesehatan berbasis dashboard multi-peran — proyek kelompok mata kuliah semester 3, dengan peran penuh sebagai UI/UX Designer. Dari wireframe hingga prototipe high-fidelity di Figma, mencakup perancangan dashboard terpisah untuk dokter, pasien, dan admin, masing-masing disesuaikan dengan tugas dan hak aksesnya untuk memastikan pengalaman yang relevan bagi tiap peran.',
       },
       fzt: {
         badge: 'Semester 2 · Proyek Kelompok',
         description:
-          'Merancang website wisata untuk destinasi Tasikmalaya dengan prototipe interaktif yang memvisualisasikan seluruh perjalanan pengguna, dari menemukan destinasi hingga merencanakan trip.',
+          'Merancang UI/UX end-to-end untuk FZT.com, website wisata destinasi Tasikmalaya — proyek kelompok mata kuliah semester 2, dengan peran penuh sebagai UI/UX Designer. Dari wireframe hingga prototipe interaktif di Figma, memvisualisasikan seluruh perjalanan pengguna mulai dari menemukan destinasi hingga merencanakan trip, dengan fokus pada alur eksplorasi yang intuitif dan mudah diikuti.',
       },
     },
   },

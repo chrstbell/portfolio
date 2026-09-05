@@ -2,7 +2,7 @@ export const currentWork = [
   {
     id: 'freelance-portfolio',
     status: 'ongoing',
-    id_title: 'Freelance — Bikin Portofolio Klien',
+    id_title: 'Freelance — Membuat Portofolio Klien',
     en_title: 'Freelance — Client Portfolio Sites',
   },
   {

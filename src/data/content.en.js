@@ -131,22 +131,22 @@ export default {
       basain: {
         badge: 'Jul 2024 – Aug 2024 · Solo Project',
         description:
-          'Designed a mobile-friendly UI/UX for an online phone case store, from wireframe to high-fidelity prototype in Figma, focused on a smooth and responsive shopping flow.',
+          'Designed end-to-end UI/UX for BASAIN, a mobile e-commerce platform for a phone case store — my first project in UI/UX. Covered the complete user flow from splash screen, login, homepage, product categories, and cart, to checkout and payment, taking it from wireframes to high-fidelity prototypes in Figma. Focused on creating an intuitive shopping flow with smooth, responsive mobile navigation.',
       },
       ruangbonsai: {
         badge: 'Semester 4 · Group Project',
         description:
-          'Designed an e-commerce platform for bonsai plants and care equipment, balancing aesthetic presentation with straightforward browsing and checkout.',
+          'Designed end-to-end UI/UX for RuangBonsai, an e-commerce platform for bonsai plants and care equipment — a semester 4 group project where I served as the sole UI/UX Designer. Took the design from wireframes to high-fidelity prototypes in Figma, covering the full flow from product browsing to checkout, with a focus on balancing aesthetic product presentation with easy shopping navigation.',
       },
       ihealth: {
         badge: 'Semester 3 · Group Project',
         description:
-          'Designed a healthcare information system with role-based dashboards for doctors, patients, and admins, each tailored to different tasks and permissions.',
+          'Designed end-to-end UI/UX for i-Health, a role-based healthcare information system — a semester 3 group project where I served as the sole UI/UX Designer. Took the design from wireframes to high-fidelity prototypes in Figma, building distinct dashboards for doctors, patients, and admins, each tailored to its specific tasks and access rights to ensure a relevant experience for every role.',
       },
       fzt: {
         badge: 'Semester 2 · Group Project',
         description:
-          'Designed a tourism website for Tasikmalaya destinations with an interactive prototype visualizing the full user journey, from destination discovery to trip planning.',
+          'Designed end-to-end UI/UX for FZT.com, a tourism website for Tasikmalaya destinations — a semester 2 group project where I served as the sole UI/UX Designer. Took the design from wireframes to interactive prototypes in Figma, visualizing the full user journey from discovering destinations to planning a trip, with a focus on an intuitive, easy-to-follow exploration flow.',
       },
     },
   },
