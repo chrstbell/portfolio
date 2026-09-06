@@ -15,7 +15,7 @@ export default function DetailProject() {
 
   if (!project) {
     return (
-      <div className="flex min-h-screen items-center justify-center px-4 pl-20 sm:pl-24 md:pl-28 lg:pl-32">
+      <div className="flex min-h-screen items-center justify-center px-4 md:pl-20 sm:pl-24 md:pl-28 lg:pl-32">
         <div className="text-center">
           <p className="font-body text-lg" style={{ color: 'var(--muted)' }}>
             Project not found.
@@ -43,7 +43,7 @@ export default function DetailProject() {
 
   if (!projectContent) {
     return (
-      <div className="flex min-h-screen items-center justify-center px-4 pl-20 sm:pl-24 md:pl-28 lg:pl-32">
+      <div className="flex min-h-screen items-center justify-center px-4 md:pl-20 sm:pl-24 md:pl-28 lg:pl-32">
         <p className="font-body text-lg" style={{ color: 'var(--muted)' }}>
           Content not available.
         </p>
@@ -54,7 +54,7 @@ export default function DetailProject() {
   const hasImages = project.images && project.images.length > 0
 
   return (
-    <div className="min-h-screen px-4 py-12 pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
+    <div className="min-h-screen px-4 pb-24 pt-12 md:pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
       <div className="mx-auto max-w-3xl">
         <Link
           to="/proyek"

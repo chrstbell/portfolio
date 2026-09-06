@@ -79,7 +79,7 @@ export default function Beranda() {
   )
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 py-24 pl-20 sm:px-8 sm:pl-24 md:pl-28 lg:pl-32">
+    <div className="flex min-h-screen items-center justify-center px-6 py-24 md:pl-20 sm:px-8 sm:pl-24 md:pl-28 lg:pl-32">
       <motion.div
         variants={reduced ? undefined : stagger}
         initial={reduced ? false : 'hidden'}

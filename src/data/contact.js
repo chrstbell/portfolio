@@ -13,8 +13,8 @@ export const contactData = {
     },
     {
       id: 'phone',
-      label: '+6288226165232',
-      href: 'https://wa.me/6288226165232',
+      label: '+62882236165232',
+      href: 'https://wa.me/62882236165232',
       icon: Phone,
     },
     {

@@ -16,8 +16,8 @@ const contactLinks = [
   },
   {
     id: 'phone',
-    label: '+6288226165232',
-    href: 'https://wa.me/6288226165232',
+    label: '+6288223616523',
+    href: 'https://wa.me/6288223616523',
     icon: Phone,
   },
   {

@@ -11,7 +11,7 @@ export default function ExperiencePage() {
   const reduced = useReducedMotion()
 
   return (
-    <div className="min-h-screen px-4 py-20 pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
+    <div className="min-h-screen px-4 pb-24 pt-20 md:pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
       <div className="mx-auto max-w-3xl">
         <SectionHeading
           eyebrow={

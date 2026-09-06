@@ -15,8 +15,8 @@ const contactLinks = [
   },
   {
     id: 'phone',
-    label: '+6288226165232',
-    href: 'https://wa.me/6288226165232',
+    label: '+6288223616523',
+    href: 'https://wa.me/6288223616523',
     icon: FaWhatsapp,
   },
   {
@@ -38,7 +38,7 @@ export default function Kontak() {
   const reduced = useReducedMotion()
 
   return (
-    <div className="flex min-h-screen flex-col px-4 py-20 pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
+    <div className="flex min-h-screen flex-col px-4 pb-24 pt-20 md:pl-20 sm:px-6 sm:pl-24 md:pl-28 lg:px-8 lg:pl-32">
       <div className="flex flex-1 flex-col justify-center">
         <div className="mx-auto max-w-2xl">
           <SectionHeading

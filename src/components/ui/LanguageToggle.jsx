@@ -22,7 +22,7 @@ export default function LanguageToggle({ className = '' }) {
         transition={{ type: 'spring', stiffness: 400, damping: 30 }}
       />
       <span
-        className="relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors"
+        className="relative z-10 px-2 py-1 font-body text-[10px] font-semibold transition-colors sm:px-3 sm:text-xs"
         style={{
           color: language === 'id' ? 'var(--fg)' : 'var(--muted)',
         }}
@@ -30,7 +30,7 @@ export default function LanguageToggle({ className = '' }) {
         ID
       </span>
       <span
-        className="relative z-10 px-3 py-1 font-body text-xs font-semibold transition-colors"
+        className="relative z-10 px-2 py-1 font-body text-[10px] font-semibold transition-colors sm:px-3 sm:text-xs"
         style={{
           color: language === 'en' ? 'var(--fg)' : 'var(--muted)',
         }}
