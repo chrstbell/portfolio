@@ -27,8 +27,9 @@ export default {
     heading: 'Tentang Saya',
     paragraphs: [
       'Mahasiswa Sistem Informasi dan UI/UX Designer yang membangun produk digital secara end-to-end — mulai dari riset pengguna dan wireframe di Figma hingga kode yang benar-benar berfungsi dengan Laravel dan HTML/CSS.',
-      'Saya telah merancang dan mengembangkan sistem yang benar-benar digunakan di dunia nyata, termasuk HOZOF, platform pemesanan makanan hotel, dan HERO, situs e-commerce yang saya bangun sendiri dari tampilan hingga database. Selain proyek perkuliahan, saya menerapkan proses yang sama di setiap produk: memahami masalah, merancang solusi, lalu merilisnya.',
-      'Saat ini kuliah di Universitas BSI Tasikmalaya, aktif di organisasi kampus, dan terbuka untuk peran UI/UX Design, Graphic Design, atau Front-End Developer — termasuk kerja remote.',
+      'Ketertarikan saya pada desain sudah ada sejak lama, dan semakin terarah saat bekerja sebagai Social Media Officer & UI/UX Designer di Basain, tempat saya mendapat tantangan pertama merancang desain website mereka dari nol. Pengalaman itu membuat saya semakin yakin ingin terjun dan terus belajar lebih dalam di bidang UI/UX maupun Front-End Development.',
+      'Sejak itu, saya telah merancang dan mengembangkan HOZOF, platform pemesanan makanan hotel yang telah terdaftar HKI, serta HERO, situs e-commerce yang saya bangun sendiri dari tampilan hingga database. Saya terbiasa bekerja dengan proses yang sama di setiap proyek: memahami masalah pengguna, merancang solusi, lalu merilisnya.',
+      'Saat ini kuliah di Universitas BSI Tasikmalaya, pernah aktif di organisasi kampus, dan terbuka untuk peran UI/UX Design, Graphic Design, atau Front-End Developer — baik kerja on-site maupun remote.',
     ],
     profileAlt:
       'Foto portrait Christabel Aurelia Rufana, UI/UX Designer dan Front-End Developer',

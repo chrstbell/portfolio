@@ -26,9 +26,10 @@ export default {
     eyebrow: '(Hi, i am)',
     heading: 'About Me',
     paragraphs: [
-      'Information Systems student and UI/UX Designer who builds end-to-end digital products — from user research and wireframes in Figma to functional, working code in Laravel and HTML/CSS.',
-      "I've designed and developed real systems used in production, including HOZOF, a hotel food-ordering platform, and HERO, an e-commerce site built solo from layout to database. Alongside coursework projects, I bring the same process to every product: understand the problem, design the solution, ship it.",
-      'Currently studying at Universitas BSI Tasikmalaya, actively involved in campus organizations, and open to UI/UX Design, Graphic Design, or Front-End Developer roles — including remote opportunities.',
+      'Information Systems student and UI/UX Designer who builds digital products end-to-end — from user research and wireframes in Figma to functioning code with Laravel and HTML/CSS.',
+      'My interest in design has been there since a long time ago, and it became more focused on UI/UX while working as a Social Media Officer & UI/UX Designer at Basain, where I got my first challenge designing their website from scratch. That experience made me even more certain about pursuing and continuing to learn deeper in UI/UX and Front-End Development.',
+      'Since then, I have designed and developed HOZOF, a hotel food-ordering platform that is officially registered under Indonesia HKI (intellectual property registration), as well as HERO, an e-commerce site I built myself from the interface down to the database. I work with the same process on every project: understand the problem, design the solution, then ship it.',
+      'Currently studying at Universitas BSI Tasikmalaya, previously active in campus organizations, and open to UI/UX Design, Graphic Design, or Front-End Developer roles — on-site or remote.',
     ],
     profileAlt:
       'Portrait photo of Christabel Aurelia Rufana, UI/UX Designer and Front-End Developer',
