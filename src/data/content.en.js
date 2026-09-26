@@ -90,7 +90,7 @@ export default {
     },
     featured: {
       hozof: {
-        label: 'Full-Stack Development — Group Project — IP-Registered (HKI) — 2026',
+        label: 'Group Project — IP-Registered (HKI) — 2026',
         problem:
           'Hotel guests previously had to call the front desk to order food — slow, prone to miscommunication, and adding workload to staff during busy hours.',
         process:
@@ -111,7 +111,7 @@ export default {
           "Adopted for active use by hotel staff. Both HoriFood and HOZOF are registered under Indonesia's Intellectual Property (HKI) protection.",
       },
       hero: {
-        label: 'Full-Stack Development — Group Project — 2026',
+        label: 'Group Project — 2026',
         problem:
           "My family's grocery store (Toko Hero) was already listed on Shopee, but marketplace admin fees cut significantly into profit margins. To keep full margins, we built a dedicated e-commerce website exclusively for Toko Hero, serving local in-city customers (delivery limited to within the city).",
         process:
@@ -131,7 +131,7 @@ export default {
           'A significantly more complete and professional system compared to the original version, with customer loyalty gamification (points, streaks, levels, vouchers), full price transparency for members, and more efficient admin operations — serving as a solid comparison point against the HERO system in my thesis.',
       },
       'tidy-repost': {
-        label: 'Browser Extension Development — Solo Project — Published on Chrome Web Store',
+        label: 'Browser Extension Development — Solo Project — Published on Chrome & Edge — 2026',
         problem:
           'My TikTok account had piled up a large number of reposts that made the profile feel cluttered. Every third-party app I found for cleaning up reposts required logging in and hit token/quota limits, and I wanted something instant without waiting in line.',
         process:

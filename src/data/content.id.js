@@ -91,7 +91,7 @@ export default {
     },
     featured: {
       hozof: {
-        label: 'Pengembangan Full-Stack — Proyek Kelompok — Terdaftar HKI — 2026',
+        label: 'Proyek Kelompok — Terdaftar HKI — 2026',
         problem:
           'Sebelumnya, tamu hotel harus menelepon resepsionis untuk memesan makanan — lambat, rawan salah komunikasi, dan menambah beban staf saat jam sibuk.',
         process:
@@ -112,7 +112,7 @@ export default {
           'Digunakan secara aktif oleh staf hotel. HoriFood dan HOZOF sama-sama terdaftar di bawah perlindungan Hak Kekayaan Intelektual (HKI) Indonesia.',
       },
       hero: {
-        label: 'Pengembangan Full-Stack — Proyek Kelompok — 2026',
+        label: 'Proyek Kelompok — 2026',
         problem:
           'Toko kelontong keluarga saya (Toko Hero) sudah terdaftar di Shopee, tapi biaya admin marketplace cukup memotong margin keuntungan — misalnya, produk seharga Rp20.000 tidak sepenuhnya masuk ke penjual setelah potongan Shopee. Supaya margin tetap utuh, kami membangun website e-commerce khusus untuk Toko Hero, melayani pelanggan lokal dalam kota (pengiriman terbatas dalam kota).',
         process:
@@ -121,7 +121,7 @@ export default {
           'Platform e-commerce khusus yang membuat Toko Hero bisa berjualan online secara lokal tanpa kehilangan margin ke biaya admin marketplace.',
       },
       laundry: {
-        label: 'Redesign & Pengembangan Fitur — Proyek Perbandingan Skripsi',
+        label: 'Redesign & Pengembangan Fitur — Proyek Perbandingan Skripsi — 2026',
         attributionNote:
           'Sistem dasar aplikasi ini dibangun oleh kelompok lain sebagai bahan perbandingan skripsi saya (HERO vs LAUNDRY). Bagian di bawah ini menjelaskan kontribusi spesifik yang saya kerjakan: redesain UI/UX menyeluruh, fitur baru, dan perbaikan fitur yang sudah ada.',
         problem:
@@ -132,7 +132,7 @@ export default {
           'Sistem yang jauh lebih lengkap dan profesional dibanding versi awal, dengan gamifikasi loyalitas pelanggan (poin, streak, level, voucher), transparansi harga penuh untuk member, dan operasional yang lebih efisien untuk admin — menjadi pembanding yang layak terhadap sistem HERO dalam skripsi saya.',
       },
       'tidy-repost': {
-        label: 'Pengembangan Ekstensi Browser — Proyek Solo — Dipublikasikan di Chrome Web Store',
+        label: 'Pengembangan Ekstensi Browser — Proyek Solo — Dipublikasikan di Chrome & Edge — 2026',
         problem:
           'Akun TikTok saya punya banyak sekali repost yang menumpuk dan bikin profil terasa berantakan. Aplikasi pihak ketiga yang saya temukan untuk membersihkan repost semuanya mengharuskan login dan kena limit token/kuota, sementara saya ingin solusi yang instan tanpa antre.',
         process:
