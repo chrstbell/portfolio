@@ -84,6 +84,9 @@ export default {
       result: 'Hasil',
       viewFigma: 'Lihat Prototipe di Figma',
       viewGithub: 'Lihat Demo Project',
+      viewGithubCode: 'Lihat Kode di Github',
+      viewChromeStore: 'Lihat di Chrome Web Store',
+      viewEdgeStore: 'Lihat di Edge Add-ons',
       portfolioTitle: (number) => `Project Portfolio (${number})`,
     },
     featured: {
@@ -127,6 +130,15 @@ export default {
           'Merombak seluruh tampilan dari template generik menjadi desain modern yang konsisten di semua halaman (admin & member). Menambahkan fitur baru: manajemen langganan (paket Bronze/Silver/Gold dengan diskon & prioritas), verifikasi pembayaran QRIS, fitur Group Cuci/split bill dengan kode undangan, laporan noda dengan foto & tingkat keparahan, dashboard rating & statistik, sistem poin-streak-voucher milestone (gamifikasi loyalitas member), tracking timeline status cucian 6 tahap untuk member, serta notifikasi WhatsApp otomatis (via Fontee API) saat status transaksi berubah. Juga memperbaiki beberapa fitur yang sudah ada: riwayat transaksi (dipecah 3 tabel status, filter periode), payment modal (breakdown diskon & kembalian real-time), dan mengganti seluruh dialog konfirmasi JS bawaan menjadi modal yang lebih rapi.',
         result:
           'Sistem yang jauh lebih lengkap dan profesional dibanding versi awal, dengan gamifikasi loyalitas pelanggan (poin, streak, level, voucher), transparansi harga penuh untuk member, dan operasional yang lebih efisien untuk admin — menjadi pembanding yang layak terhadap sistem HERO dalam skripsi saya.',
+      },
+      'tidy-repost': {
+        label: 'Pengembangan Ekstensi Browser — Proyek Solo — Dipublikasikan di Chrome Web Store',
+        problem:
+          'Akun TikTok saya punya banyak sekali repost yang menumpuk dan bikin profil terasa berantakan. Aplikasi pihak ketiga yang saya temukan untuk membersihkan repost semuanya mengharuskan login dan kena limit token/kuota, sementara saya ingin solusi yang instan tanpa antre.',
+        process:
+          'Membangun ekstensi browser (Chrome & Edge) yang scan seluruh repost di akun TikTok langsung dari sisi client, tanpa perlu login, API key, atau token, dan tanpa limit apa pun — gratis sepenuhnya. Pengguna bisa pilih repost mana saja yang mau dihapus dari hasil scan, lalu sistem meng-otomatisasi proses hapusnya satu per satu tanpa perlu klik manual di TikTok. Untuk mengatasi TikTok yang memblokir event klik sintetis biasa, saya menggunakan Chrome DevTools Protocol (CDP) lewat `chrome.debugger` supaya klik yang dikirim dianggap sebagai klik asli oleh TikTok.',
+        result:
+          'Sudah dipublikasikan di Chrome Web Store dan Microsoft Edge Add-ons, sedang menunggu persetujuan . Untuk akun dengan repost di bawah 100, proses scan dan unrepost otomatis berjalan 100% lancar tanpa perlu campur tangan manual. Masih ada beberapa bug yang perlu diperbaiki untuk akun dengan jumlah repost yang sangat banyak.',
       },
     },
     coursework: {

@@ -112,7 +112,7 @@ export default function DetailProject() {
 
         {/* Photo slot — always rendered */}
         <div
-          className="mb-8 overflow-hidden"
+          className="relative mb-8 overflow-hidden"
           style={{
             aspectRatio: '1700 / 1080',
             minHeight: '320px',
@@ -252,8 +252,24 @@ export default function DetailProject() {
           )}
           {project.githubUrl && (
             <Button href={project.githubUrl} variant="secondary">
-              <LanguageFade as="span">{labels.viewGithub}</LanguageFade>
+              <LanguageFade as="span">
+                {project.githubLabel
+                  ? labels[project.githubLabel]
+                  : labels.viewGithub}
+              </LanguageFade>
               <GitBranch size={16} />
+            </Button>
+          )}
+          {project.chromeStoreUrl && (
+            <Button href={project.chromeStoreUrl} variant="secondary">
+              <LanguageFade as="span">{labels.viewChromeStore}</LanguageFade>
+              <ExternalLink size={16} />
+            </Button>
+          )}
+          {project.edgeStoreUrl && (
+            <Button href={project.edgeStoreUrl} variant="secondary">
+              <LanguageFade as="span">{labels.viewEdgeStore}</LanguageFade>
+              <ExternalLink size={16} />
             </Button>
           )}
         </div>

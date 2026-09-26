@@ -49,7 +49,7 @@ export const featuredProjects = [
     id: 'laundry',
     number: '03',
     title: 'LAUNDRY',
-    githubUrl: 'https://demoapp-laundry.vercel.app/',
+    githubUrl: '',
     accent: 'bg-lavender',
     badgeVariant: 'redesign',
     images: [
@@ -64,6 +64,29 @@ export const featuredProjects = [
       {
         src: `${base}laundry-3.jpg`,
         alt: 'Dashboard penjual Laundry',
+      },
+    ],
+  },
+  {
+    id: 'tidy-repost',
+    number: '04',
+    title: 'Tidy Repost',
+    githubUrl: '',
+    chromeStoreUrl: '',
+    edgeStoreUrl: '',
+    accent: 'bg-mint',
+    images: [
+      {
+        src: `${base}tidy-repost-1.jpg`,
+        alt: 'Homepage Tidy Repost',
+      },
+      {
+        src: `${base}tidy-repost-2.jpg`,
+        alt: 'Halaman layanan dan checkout',
+      },
+      {
+        src: `${base}tidy-repost-3.jpg`,
+        alt: 'Dashboard penjual Tidy Repost',
       },
     ],
   },

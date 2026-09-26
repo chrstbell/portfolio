@@ -123,10 +123,17 @@ export const visualWorkEvents = [
     cover: `${base}visual/cotatreats-cover.jpg`,
     items: [
       { type: 'image', 
-        category: 'Postingan Instagram', 
+        category: 'Postingan/Reels Instagram', 
         media: [`${base}visual/cotatreats-1.jpg`,
           `${base}visual/cotatreats-1-2.jpg`,
-
+          `${base}visual/cotatreats-1-3.jpg`,
+          `${base}visual/cotatreats-1-4.jpg`,
+          `${base}visual/cotatreats-1-5.jpg`,
+          `${base}visual/cotatreats-1-6.jpg`,
+          `${base}visual/cotatreats-1-7.jpg`,
+          `${base}visual/cotatreats-1-8.jpg`,
+          `${base}visual/cotatreats-1-9.jpg`,
+          `${base}visual/cotatreats-1-10.jpg`,
         ] 
       },
       { type: 'image', 

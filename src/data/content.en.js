@@ -83,6 +83,9 @@ export default {
       result: 'Result',
       viewFigma: 'View Prototype on Figma',
       viewGithub: 'View Demo Project',
+      viewGithubCode: 'View Code on Github',
+      viewChromeStore: 'View on Chrome Web Store',
+      viewEdgeStore: 'View on Edge Add-ons',
       portfolioTitle: (number) => `Project Portfolio (${number})`,
     },
     featured: {
@@ -126,6 +129,15 @@ export default {
           'Redesigned the entire interface from a generic template into a consistent, modern design across all pages (admin & member). Added new features: subscription management (Bronze/Silver/Gold tiers with discounts and priority service), QRIS payment verification, a Group Wash/split-bill feature with invite codes, structured stain reports with photos and severity levels, a rating dashboard with statistics, a points-streak-voucher milestone system (member loyalty gamification), a 6-stage laundry status tracking timeline for members, and automatic WhatsApp notifications (via Fontee API) on transaction status changes. Also improved several existing features: transaction history (split into 3 status tables with period filters), the payment modal (real-time discount breakdown and change calculation), and replaced all default JS confirmation dialogs with styled modals.',
         result:
           'A significantly more complete and professional system compared to the original version, with customer loyalty gamification (points, streaks, levels, vouchers), full price transparency for members, and more efficient admin operations — serving as a solid comparison point against the HERO system in my thesis.',
+      },
+      'tidy-repost': {
+        label: 'Browser Extension Development — Solo Project — Published on Chrome Web Store',
+        problem:
+          'My TikTok account had piled up a large number of reposts that made the profile feel cluttered. Every third-party app I found for cleaning up reposts required logging in and hit token/quota limits, and I wanted something instant without waiting in line.',
+        process:
+          'Built a browser extension (Chrome & Edge) that scans all reposts on a TikTok account directly client-side, with no login, no API key, no token, and no limits — completely free. Users can pick which reposts to remove from the scan results, and the system automates the removal one by one without any manual clicking on TikTok. To work around TikTok blocking synthetic click events, I used the Chrome DevTools Protocol (CDP) via `chrome.debugger` so the clicks are treated as genuine user clicks.',
+        result:
+          'Published on the Chrome Web Store and Microsoft Edge Add-ons, currently awaiting approval. For accounts with fewer than 100 reposts, scanning and auto-unrepost run 100% reliably with no manual steps needed. Some bugs still remain to be fixed for accounts with a very large number of reposts.',
       },
     },
     coursework: {

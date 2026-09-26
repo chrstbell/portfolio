@@ -40,70 +40,67 @@ export default function PhotoStack({ images }) {
   if (!images?.length) return null
 
   return (
-    <div className="flex flex-col items-center">
-      <div
-        className="relative mx-auto w-full overflow-hidden"
-        style={{
-          aspectRatio: '1700 / 1080',
-          minHeight: '320px',
-          borderRadius: '1rem',
-          background: 'var(--chip-bg)',
-          border: '1px solid var(--line)',
-        }}
-      >
+    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4">
+      <div className="relative min-h-0 w-full flex-1">
         {order.map((imageIndex, position) => {
           const image = images[imageIndex]
           const isFront = position === 0
           const style = stackStyle(position, images.length)
 
           return (
-            <motion.button
+            <div
               key={imageIndex}
-              type="button"
-              layout
-              onClick={isFront ? handleClick : undefined}
-              disabled={!isFront}
-              aria-label={image.alt}
-              className={`absolute left-1/2 top-0 w-[78%] -translate-x-1/2 overflow-hidden rounded-2xl shadow-lg ${
-                isFront ? 'cursor-pointer' : 'pointer-events-none'
-              }`}
-              initial={false}
-              animate={{
-                ...style,
-                rotate: rotations[imageIndex],
-              }}
-              transition={
-                reduced
-                  ? { duration: 0 }
-                  : { type: 'spring', stiffness: 280, damping: 24, mass: 0.8 }
-              }
-              whileTap={isFront && !reduced ? { scale: style.scale * 0.97 } : undefined}
-              style={{
-                transformOrigin: 'center center',
-                background: 'var(--card-bg)',
-                border: '1px solid var(--line)',
-              }}
+              className="pointer-events-none absolute inset-0 flex items-center justify-center"
             >
-              <div
-                className="relative aspect-[170/108] w-full overflow-hidden"
-                style={{ background: 'var(--chip-bg)' }}
+              <motion.button
+                type="button"
+                onClick={isFront ? handleClick : undefined}
+                disabled={!isFront}
+                aria-label={image.alt}
+                className={`pointer-events-auto w-[82%] overflow-hidden rounded-2xl shadow-lg ${
+                  isFront ? 'cursor-pointer' : 'pointer-events-none'
+                }`}
+                initial={false}
+                animate={{
+                  ...style,
+                  rotate: rotations[imageIndex],
+                }}
+                transition={
+                  reduced
+                    ? { duration: 0 }
+                    : { type: 'spring', stiffness: 280, damping: 24, mass: 0.8 }
+                }
+                whileTap={
+                  isFront && !reduced ? { scale: style.scale * 0.97 } : undefined
+                }
+                style={{
+                  zIndex: style.zIndex,
+                  transformOrigin: 'center center',
+                  background: 'var(--card-bg)',
+                  border: '1px solid var(--line)',
+                }}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  draggable={false}
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
-                />
-              </div>
-            </motion.button>
+                <div
+                  className="relative flex aspect-[170/108] w-full items-center justify-center overflow-hidden"
+                  style={{ background: 'var(--chip-bg)' }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="h-full w-full object-contain object-center"
+                    draggable={false}
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none'
+                    }}
+                  />
+                </div>
+              </motion.button>
+            </div>
           )
         })}
       </div>
 
-      <div className="mt-5 flex items-center gap-1.5">
+      <div className="flex items-center gap-1.5">
         {images.map((_, i) => (
           <span
             key={i}
@@ -128,7 +125,7 @@ export default function PhotoStack({ images }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.3 }}
-            className="mt-2 font-body text-xs"
+            className="font-body text-xs"
             style={{ color: 'var(--muted)' }}
           >
             {content.photoStack.hint}
