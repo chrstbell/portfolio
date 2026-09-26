@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { MapPin, Clock, Clapperboard, Palette } from 'lucide-react'
-import { SiGmail, SiFigma, SiLaravel, SiJavascript, SiMysql, SiHtml5, SiCss, SiGit, SiGithub, SiLaragon, SiPhp } from 'react-icons/si'
+import { SiGmail, SiFigma, SiLaravel, SiJavascript, SiMysql, SiHtml5, SiCss, SiGit, SiGithub, SiLaragon, SiPhp, SiTypescript, SiJson, SiReact, SiVercel } from 'react-icons/si'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa'
 import { useLanguage } from '../../context/LanguageContext'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
@@ -32,8 +32,11 @@ const tools = [
   { icon: SiHtml5, label: 'HTML' },
   { icon: SiCss, label: 'CSS' },
   { icon: SiJavascript, label: 'JavaScript' },
+  { icon: SiTypescript, label: 'TypeScript' },
+  { icon: SiReact, label: 'React' },
   { icon: SiGit, label: 'Git' },
   { icon: SiGithub, label: 'GitHub' },
+  { icon: SiVercel, label: 'Vercel' },
   { icon: SiLaragon, label: 'Laragon' },
   { icon: SiPhp, label: 'PHP' },
   { icon: SiLaravel, label: 'Laravel' },
