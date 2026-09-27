@@ -71,11 +71,15 @@ export const featuredProjects = [
     id: 'tidy-repost',
     number: '04',
     title: 'Tidy Repost',
-    githubUrl: '',
-    chromeStoreUrl: '',
+    chromeUrl: 'https://tidyrepost.vercel.app/',
+    chromeStoreUrl: 'https://chromewebstore.google.com/detail/jnllkpngkhbpnnpejjigjioahndihagd?utm_source=item-share-cb',
     edgeStoreUrl: '',
     accent: 'bg-mint',
     images: [
+      {
+        src: `${base}tidy-repost.mp4`,
+        alt: 'Video Tidy Repost',
+      },
       {
         src: `${base}tidy-repost-1.jpg`,
         alt: 'Homepage Tidy Repost',
@@ -86,6 +90,10 @@ export const featuredProjects = [
       },
       {
         src: `${base}tidy-repost-3.jpg`,
+        alt: 'Dashboard penjual Tidy Repost',
+      },
+      {
+        src: `${base}tidy-repost-4.jpg`,
         alt: 'Dashboard penjual Tidy Repost',
       },
     ],

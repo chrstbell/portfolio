@@ -111,7 +111,9 @@ export default function Proyek() {
           {featuredProjects.map((project, i) => {
             const projectContent = content.projects.featured[project.id]
             if (!projectContent) return null
-            const firstImg = project.images?.[0]
+            const firstImg = project.images?.find(
+              (img) => !/\.(mp4|webm|mov|m4v)$/i.test(img.src),
+            )
             return (
               <ProjectCard
                 key={project.id}

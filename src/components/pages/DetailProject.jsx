@@ -260,6 +260,12 @@ export default function DetailProject() {
               <GitBranch size={16} />
             </Button>
           )}
+          {project.chromeUrl && (
+            <Button href={project.chromeUrl} variant="secondary">
+              <LanguageFade as="span">{labels.viewLanding}</LanguageFade>
+              <ExternalLink size={16} />
+            </Button>
+          )}
           {project.chromeStoreUrl && (
             <Button href={project.chromeStoreUrl} variant="secondary">
               <LanguageFade as="span">{labels.viewChromeStore}</LanguageFade>
