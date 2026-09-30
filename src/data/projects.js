@@ -73,7 +73,7 @@ export const featuredProjects = [
     title: 'Tidy Repost',
     chromeUrl: 'https://tidyrepost.vercel.app/',
     chromeStoreUrl: 'https://chromewebstore.google.com/detail/jnllkpngkhbpnnpejjigjioahndihagd?utm_source=item-share-cb',
-    edgeStoreUrl: '',
+    edgeStoreUrl: 'https://microsoftedge.microsoft.com/addons/detail/lcfbkmkceiklnfniijggjlmjieeefboh',
     accent: 'bg-mint',
     images: [
       {
