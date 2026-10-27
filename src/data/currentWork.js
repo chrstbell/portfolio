@@ -7,8 +7,14 @@ export const currentWork = [
   },
   {
     id: 'landing-page-project',
-    status: 'upcoming',
-    id_title: 'Project Landing Page (segera diumumkan)',
-    en_title: 'Landing Page Project (details coming soon)',
+    status: 'ongoing',
+    id_title: 'Project Landing Page GAS Construction',
+    en_title: 'Landing Page Project GAS Construction',
+  },
+  {
+    id: 'bayang-project',
+    status: 'ongoing',
+    id_title: 'Project Website Bayang',
+    en_title: 'Project Website Bayang',
   },
 ]
